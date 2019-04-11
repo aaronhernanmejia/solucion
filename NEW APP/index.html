@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="estilos/estilos_inicio.css">
+    <script type="text/javascript" src="jquery/dist/jquery.min.js"></script>
+    <title>Inicio</title>
+</head>
+<body>
+    <script>
+        $(document).ready(function(){
+            var comenzar=$("#comenzar").hide();
+            var texto_listo=$("#texto_listo").hide();
+            
+            /*var foco=$("#foco");
+            foco.animate({
+                marginLeft:"80%"
+            },6000);*/
+           
+            var linea_carga=$("#linea_carga");
+            linea_carga.animate({
+                width:"100%"
+            },6000);
+         
+
+            var temporizador=setInterval(function(){iniciar()},6500); //Restrasa la funcion comenzar.
+                 function iniciar(){
+                      $("#texto_cargando").hide();
+                      texto_listo=$("#texto_listo").show();
+                      $("#comenzar").fadeIn(500);
+                 }
+
+        });
+    </script>
+    <header>
+       SOLUCION DE CIRCUITOS
+    </header>
+    <img id="logo" src="imagenes/logo.png">
+    <div id="barra_carga">
+       <!--<img id="foco" src="imagenes/circuito.png">-->
+       <div id="espacio_carga"> 
+            <div id="linea_carga"> 
+
+            </div> 
+       </div>
+       <br/>
+       <p id="texto_cargando">Cargando...</p>
+       <p id="texto_listo">Listo</p>
+    </div>
+    <br/>
+   
+   <a href="programas/menu.html">
+        <div id="comenzar">
+            Iniciar
+        </div>
+    </a>
+
+    <footer>
+        Desarrollado por: Aaron Hernan Mejia Ceja
+    </footer>
+</body>
+</html>
